@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#319197">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <title>Yeni Öğrenci Bilgi Girişi</title>
+    <script src="app.js" defer></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f9f9;
+            color: #333;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: #ffffff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+        }
+
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+        }
+
+        .modal.hidden {
+            display: none;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .modal-content p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .modal-content button {
+            padding: 0.5rem 1.2rem;
+            border: none;
+            border-radius: 8px;
+            background-color: #319197;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        h1 {
+            text-align: center;
+            color: #319197;
+            margin-bottom: 1.5rem;
+        }
+
+        form label {
+            display: block;
+            margin-top: 1rem;
+            font-weight: bold;
+        }
+
+        form input,
+        form textarea {
+            width: 100%;
+            padding: 0.75rem;
+            margin-top: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+            box-sizing: border-box;
+        }
+
+        form button {
+            display: block;
+            width: 100%;
+            margin-top: 2rem;
+            padding: 0.75rem;
+            background-color: #319197;
+            color: white;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        form button:hover {
+            background-color: #26797f;
+        }
+
+        form select {
+            width: 100%;
+            padding: 0.75rem;
+            margin-top: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+            background-color: white;
+            box-sizing: border-box;
+            appearance: none;
+            background-image: url("data:image/svg+xml;utf8,<svg fill='gray' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+            background-repeat: no-repeat;
+            background-position-x: calc(100% - 1rem);
+            background-position-y: center;
+            background-size: 1rem;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                margin: 1rem;
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Yeni Öğrenci Bilgi Girişi</h1>
+
+        <form id="studentForm">
+            <label for="student-name">Öğrenci Adı Soyadı:</label>
+            <input type="text" id="student-name" name="student-name" maxlength="50" required />
+
+            <label for="parent1">Veli 1 Telefon Numarası:</label>
+            <input type="tel" id="parent1" name="parent1" pattern="^\+?\d{10,15}$" required />
+
+            <label for="parent2">Veli 2 Telefon Numarası:</label>
+            <input type="tel" id="parent2" name="parent2" pattern="^\+?\d{10,15}$" />
+
+            <label for="blood">Kan Grubu:</label>
+            <select id="blood" name="blood" required>
+                <option value="">Lütfen seçiniz</option>
+                <option value="A Rh+">A Rh(+)</option>
+                <option value="A Rh-">A Rh(-)</option>
+                <option value="B Rh+">B Rh(+)</option>
+                <option value="B Rh-">B Rh(-)</option>
+                <option value="AB Rh+">AB Rh(+)</option>
+                <option value="AB Rh-">AB Rh(-)</option>
+                <option value="O Rh+">O Rh(+)</option>
+                <option value="O Rh-">O Rh(-)</option>
+            </select>
+            <label for="allergies">Alerjiler:</label>
+            <input type="text" id="allergies" name="allergies" maxlength="100" />
+
+            <label for="medications">Kullandığı İlaçlar:</label>
+            <input type="text" id="medications" name="medications" maxlength="100" />
+
+            <label for="notes">Özel Durum Notları:</label>
+            <textarea id="notes" name="notes" rows="5" maxlength="500"></textarea>
+
+            <button type="submit">Bilgileri Kaydet</button>
+        </form>
+    </div>
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <p id="modal-message">İşleniyor...</p>
+            <button id="modal-close">Tamam</button>
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>

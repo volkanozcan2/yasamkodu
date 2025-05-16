@@ -1,0 +1,102 @@
+[
+  {
+    "id": "1a7f0e2d-7c1e-44ab-bbb1-2f456001a001",
+    "student-name": "Ahmet Yılmaz",
+    "parent1": "05331234567",
+    "parent2": "05339876543",
+    "blood": "B Rh-",
+    "allergies": "Penisilin",
+    "medications": "Ventolin",
+    "notes": "Astım hastası, düzenli ilaç kullanıyor."
+  },
+  {
+    "id": "2b8c9f3a-3f4c-4dbe-abc3-48c77002b002",
+    "student-name": "Ayşe Demir",
+    "parent1": "05331112233",
+    "parent2": "05332223311",
+    "blood": "AB Rh+",
+    "allergies": "Yok",
+    "medications": "Yok",
+    "notes": "Gözlük kullanıyor. Derste tahtayı görmekte zorlanıyor, ön sıralarda oturması tavsiye edilir."
+  },
+  {
+    "id": "3c9d0a4f-5d2e-4eed-9bcd-78c88003c003",
+    "student-name": "Mehmet Kaya",
+    "parent1": "05441112233",
+    "parent2": "05442223311",
+    "blood": "O Rh-",
+    "allergies": "Yok",
+    "medications": "İburamin",
+    "notes": "Sık sık baş ağrısı şikayeti var, gerekli durumlarda okul hemşiresine yönlendirilmesi önerilir."
+  },
+  {
+    "id": "4d0e1b6c-6e3f-4ffe-badc-98d99004d004",
+    "student-name": "Zeynep Arslan",
+    "parent1": "05345556677",
+    "parent2": "05349998877",
+    "blood": "A Rh+",
+    "allergies": "Yumurta",
+    "medications": "Yok",
+    "notes": "Gıda alerjisi nedeniyle yemekhanede özel menü tercih edilmeli. Etiket kontrolleri yapılmalıdır."
+  },
+  {
+    "id": "5e1f2c7d-8f4f-5a1e-cbcd-11eaa005e005",
+    "student-name": "Yusuf Çelik",
+    "parent1": "05001112233",
+    "parent2": "05002223344",
+    "blood": "B Rh+",
+    "allergies": "Toz",
+    "medications": "Antihistaminik",
+    "notes": "Alerjik rinit var, özellikle tozlu sınıflarda semptomları artabiliyor. Öğrencinin pencere altı gibi alerjen yoğun bölgelerden uzak tutulması gerekir."
+  },
+  {
+    "id": "6f203d8e-9a5f-6b2f-ddde-33fbb006f006",
+    "student-name": "Elif Şahin",
+    "parent1": "05003334455",
+    "parent2": "05004445566",
+    "blood": "AB Rh-",
+    "allergies": "Yok",
+    "medications": "Yok",
+    "notes": "Sosyal ilişkilerde zaman zaman çekingen davranıyor. Grup etkinliklerinde desteklenmesi önerilir."
+  },
+  {
+    "id": "7a304e9f-0b6f-7c3f-eeef-44fcc007a007",
+    "student-name": "Kerem Duran",
+    "parent1": "05005556677",
+    "parent2": "05006667788",
+    "blood": "O Rh+",
+    "allergies": "Süt",
+    "medications": "Laktaz enzimi",
+    "notes": "Laktoz intoleransı nedeniyle süt ve sütlü ürünlerden uzak tutulmalı. Laktaz enzimi gerektiğinde çantasından alınabilir."
+  },
+  {
+    "id": "8b405f0a-1c7f-8d4f-ff01-55add008b008",
+    "student-name": "Fatma Aydın",
+    "parent1": "05007778899",
+    "parent2": "05008889900",
+    "blood": "A Rh+",
+    "allergies": "Arı sokması (şiddetli)",
+    "medications": "Epinefrin oto-enjektörü",
+    "notes": "Arı sokması durumunda hızlı müdahale gerekir. Oto-enjektör öğretmen dolabında saklanmalıdır. Her öğretmen bilgilendirilmiştir."
+  },
+  {
+    "id": "9c506011-2d8f-9e5f-1012-66bee009c009",
+    "student-name": "Mert Karaca",
+    "parent1": "05559998877",
+    "parent2": "05551112233",
+    "blood": "B Rh-",
+    "allergies": "Aspirin",
+    "medications": "Parol",
+    "notes": "Ağrı kesici ihtiyacında yalnızca parasetamol bazlı ilaçlar verilmelidir. Aspirin verilmesi durumunda ciddi reaksiyon görülebilir."
+  },
+  {
+    "id": "0d607122-3e9f-af60-2123-77cff000d010",
+    "student-name": "Selin Yüce",
+    "parent1": "05556667788",
+    "parent2": "05557778899",
+    "blood": "AB Rh+",
+    "allergies": "Yok",
+    "medications": "Demir takviyesi",
+    "notes": "Demir eksikliği nedeniyle okul öğünlerinde kırmızı et içeren besinler tercih edilmelidir. Günlük olarak sabah demir takviyesi alır."
+  }
+]

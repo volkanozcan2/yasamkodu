@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Öğrenci Düzenle</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 600px;
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #319197;
+            margin-bottom: 1.5rem;
+        }
+
+        form label {
+            display: block;
+            margin-top: 1rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        form input,
+        form select,
+        form textarea {
+            width: 100%;
+            padding: 0.6rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            margin-top: 0.3rem;
+            box-sizing: border-box;
+            font-size: 1rem;
+        }
+
+        form button {
+            margin-top: 1.5rem;
+            padding: 0.8rem;
+            width: 100%;
+            background-color: #319197;
+            border: none;
+            color: white;
+            font-size: 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #277e7e;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Öğrenci Bilgilerini Düzenle</h1>
+        <form id="editForm">
+            <input type="hidden" id="student-id">
+
+            <label for="student-name">Ad Soyad:</label>
+            <input type="text" id="student-name" name="student-name" required>
+
+            <label for="parent1">Veli 1 Telefon:</label>
+            <input type="tel" id="parent1" name="parent1">
+
+            <label for="parent2">Veli 2 Telefon:</label>
+            <input type="tel" id="parent2" name="parent2">
+
+            <label for="blood">Kan Grubu:</label>
+            <select id="blood" name="blood">
+                <option value="">Seçiniz</option>
+                <option value="A Rh+">A Rh+</option>
+                <option value="A Rh-">A Rh-</option>
+                <option value="B Rh+">B Rh+</option>
+                <option value="B Rh-">B Rh-</option>
+                <option value="AB Rh+">AB Rh+</option>
+                <option value="AB Rh-">AB Rh-</option>
+                <option value="O Rh+">O Rh+</option>
+                <option value="O Rh-">O Rh-</option>
+            </select>
+
+            <label for="allergies">Alerjiler:</label>
+            <input type="text" id="allergies" name="allergies">
+
+            <label for="medications">İlaçlar:</label>
+            <input type="text" id="medications" name="medications">
+
+            <label for="notes">Notlar:</label>
+            <textarea id="notes" name="notes" rows="4"></textarea>
+
+            <button type="submit">Güncelle</button>
+        </form>
+    </div>
+    <script src="edit.js"></script>
+</body>
+
+</html>

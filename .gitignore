@@ -1,0 +1,41 @@
+# Node modules
+node_modules/
+
+# Log dosyaları
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime dosyaları
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# dotenv (gizli ayarlar)
+.env
+.env.test
+
+# Sistem dosyaları
+.DS_Store
+Thumbs.db
+
+# IDE'ler
+.vscode/
+.idea/
+
+# Geliştirme çıktıları
+dist/
+build/
+coverage/
+
+# Geçici dosyalar
+*.swp
+*.swo
+*.tmp
+*.bak
+
+# Mac ve Linux geçici dosyalar
+*.orig

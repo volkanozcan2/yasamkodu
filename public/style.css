@@ -13,6 +13,14 @@ body {
     padding: 12px;
 }
 
+.notes-cell {
+    max-width: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    cursor: help;
+}
+
 .container {
     max-width: 800px;
     margin: 0 auto;
